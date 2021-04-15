@@ -36,7 +36,6 @@ export class AuthService {
     this.router.navigateByUrl('/login');
   }
 
-
   constructor(
     private oauthService: OAuthService,
     private router: Router,
