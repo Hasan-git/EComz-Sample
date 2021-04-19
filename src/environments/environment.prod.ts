@@ -1,5 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
   backEnd: 'https://api.spotify.com',
   loginUrl: 'https://accounts.spotify.com/authorize',
   redirectUri: 'http://localhost:4200/',

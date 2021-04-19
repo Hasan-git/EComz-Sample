@@ -1,7 +1,10 @@
+import { MatDialogModule } from '@angular/material/dialog';
+import { SharedMaterialModule } from 'src/app/blocks/common/shared-material.module';
+import { PrimeQuestionComponent } from './theme/prime-question/prime-question.component';
 import { PaginationModule } from './blocks/reusable-components/pagination/pagination.module';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StarRatingModule } from 'angular-star-rating';
@@ -16,6 +19,7 @@ import { AlbumBoxComponent } from './theme/album/album-box/album-box.component';
 import { AlbumComponent } from './theme/album/album.component';
 import { ArtistBoxComponent } from './theme/search/artist-box/artist-box.component';
 import { SearchComponent } from './theme/search/search.component';
+import { AnswerDialogComponent } from './theme/prime-question/answer-dialog/answer-dialog.component';
 
 
 @NgModule({
@@ -25,12 +29,14 @@ import { SearchComponent } from './theme/search/search.component';
     AlbumComponent,
     ArtistBoxComponent,
     AlbumBoxComponent,
+    PrimeQuestionComponent,
+    AnswerDialogComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
-
 
     NgxUiLoaderModule,
     FlexLayoutModule,
@@ -41,6 +47,8 @@ import { SearchComponent } from './theme/search/search.component';
     CoreModule.forRoot(),
     HeaderModule,
     PaginationModule,
+    SharedMaterialModule,
+    // MatDialogModule
   ],
   bootstrap: [AppComponent]
 })

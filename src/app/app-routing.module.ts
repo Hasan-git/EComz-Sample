@@ -1,3 +1,4 @@
+import { PrimeQuestionComponent } from './theme/prime-question/prime-question.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -25,6 +26,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     resolve: { data: AlbumResolverService },
     data: { title: 'Albums' }
+  },
+  {
+    path: 'prime-question',
+    component: PrimeQuestionComponent,
+    data: { title: 'Problem statement' }
   },
   { path: '**', redirectTo: 'search', pathMatch: 'full' },
 ]

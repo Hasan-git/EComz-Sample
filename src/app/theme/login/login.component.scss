@@ -2,7 +2,7 @@
   min-height: 50vh;
 }
 
-button {
+.button {
   min-width: 300px;
   background: #fff;
   border: 1px solid #ddd;
@@ -13,6 +13,13 @@ button {
   font-size: 18px;
   font-weight: 600;
   color: #3d3a3a;
+
+  .help_icon {
+    margin-top: 3px;
+    color: #22ce5e;
+    font-size: 35px;
+    margin-right: 15px;
+  }
 
   .logo {
     position: absolute;

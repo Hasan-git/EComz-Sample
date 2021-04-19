@@ -1,9 +1,17 @@
 <div>
   <app-header [showLogout]="false"></app-header>
-  <div class="content" fxLayout="row" fxLayoutAlign="center center">
-    <button (click)="login()">
-      <div>Login</div>
+  <div class="content" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <button class="button" mat-stroked-button (click)="login()">
+      <div>Spotify</div>
       <img class="logo" height="40px" width="40px" src="./assets/images/logo.png">
     </button>
+
+    <button class="button" mat-stroked-button  [routerLink]="['/prime-question']" >
+      <div>Problem statement</div>
+      <!-- <img class="logo" height="40px" width="40px" src="./assets/images/3.png"> -->
+      <mat-icon class="logo help_icon" aria-hidden="false" aria-label="Example home icon">help_outline</mat-icon>
+
+    </button>
+
   </div>
 </div>

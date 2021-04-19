@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Answer</h2>
+
+<!-- DIALOG BODY -->
+<mat-dialog-content class="mat-typography">
+
+  <div fxLayout="column">
+
+    <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto" fxLayoutGap="15px">
+      <mat-icon class=" grey_fg">label</mat-icon>
+      <fieldset fxFlex="1 1 auto">
+        <legend>Sum</legend>
+        <label>{{payload.largestSum}}</label>
+      </fieldset>
+    </div>
+
+    <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto" fxLayoutGap="15px">
+      <mat-icon class="grey_fg">label</mat-icon>
+      <fieldset fxFlex="1 1 auto">
+        <legend>Terms count</legend>
+        <label>{{payload.termsCount}}</label>
+      </fieldset>
+    </div>
+
+  </div>
+
+</mat-dialog-content>
+<!-- / DIALOG BODY -->
+
+<!-- DIALOG FOOTER -->
+<mat-dialog-actions align="end" class="pb-3">
+  <button mat-raised-button mat-dialog-close>Ok</button>
+</mat-dialog-actions>
+<!-- / DIALOG FOOTER -->

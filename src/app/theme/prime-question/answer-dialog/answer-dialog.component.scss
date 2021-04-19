@@ -1,0 +1,24 @@
+fieldset {
+  border: 2px solid #eeeeee;
+  padding: 10px;
+  box-shadow: 7px 7px 8px 3px #fffcfc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 12px;
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  width: unset;
+  color: #178c40;
+}
+
+label {
+  padding-left: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.grey_fg{
+  color: #424242;
+}

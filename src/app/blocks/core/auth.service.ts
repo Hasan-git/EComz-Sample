@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { OAuthErrorEvent, OAuthService } from 'angular-oauth2-oidc';
 import { BehaviorSubject, combineLatest, Observable, ReplaySubject } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root' })
@@ -72,9 +72,11 @@ export class AuthService {
         this.isAuthenticatedSubject$.next(this.oauthService.hasValidAccessToken());
       });
 
-    this.oauthService.events
-      .pipe(filter(e => ['token_received'].includes(e.type)))
-      .subscribe(e => this.oauthService.loadUserProfile());
+    // this.oauthService.events
+    //   .pipe(
+    //     filter(e => ['token_received'].includes(e.type)),
+    //   )
+    //   .subscribe(e => this.oauthService.loadUserProfile());
 
     this.oauthService.events
       .pipe(filter(e => ['session_terminated', 'session_error'].includes(e.type)))

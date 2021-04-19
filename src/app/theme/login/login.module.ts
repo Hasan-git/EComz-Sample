@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login.component';
+import { SharedMaterialModule } from 'src/app/blocks/common/shared-material.module';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [LoginComponent],
   imports: [
+    SharedMaterialModule,
     CommonModule,
     HeaderModule,
     FlexLayoutModule,
